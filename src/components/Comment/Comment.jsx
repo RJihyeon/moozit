@@ -1,9 +1,15 @@
 import React from "react";
+import { useParams } from "react-router-dom";
 import { AddComment, Alcohol, CardWrapper,Profile,CardPic,Title,PostWrapper } from "./Comment.styles";
 import { BsPersonCircle, BsSlack } from "react-icons/bs";
 import { SlHeart } from "react-icons/sl";
 
-function Comment(){
+function Comment(post){
+
+  const { id }  = useParams();
+
+  console.log(post);
+
   return(
     <>
     <CardWrapper>
@@ -27,8 +33,8 @@ function Comment(){
     </Alcohol>
     <AddComment>
       <li><SlHeart size = {30}/></li>
-      <li><input placeholder="Add a comment"></input></li>
-      <li class="enterbutton"><button>Enter</button></li>
+      <li><input type="text" placeholder="Add a comment"/></li>
+      <li class="enterbutton"><button type="button">Enter</button></li>
     </AddComment>
     </CardWrapper>
     </>

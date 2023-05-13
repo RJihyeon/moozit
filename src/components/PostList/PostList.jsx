@@ -32,8 +32,8 @@ function PostList() {
     }
   };
 
-  const handleClick = (ID) => {
-    navigate(`postdetail/${ID}`)
+  const handleClick = (ID, email, title, content) => {
+    navigate(`../postdetail/${ID}`, { state: { nickname: email, title: title, content: content }})
   }
 
   return (
@@ -43,7 +43,7 @@ function PostList() {
           {allPost ? allPost.map((post) => (
             <Button
               type="button"
-              onClick={() => handleClick(post.ID)}
+              onClick={() => handleClick(post.ID, post.email, post.title, post.content)}
             >
               <PostCard
                 key={post.ID}

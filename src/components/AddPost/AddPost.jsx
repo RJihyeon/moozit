@@ -31,6 +31,7 @@ function AddPost() {
 
   const notify = () => toast("성공적으로 글을 등록했습니다!");
 
+  const [ pictureURL, setPictureURL ] = useState("");
   const [formValues, setFormValues] = useState(initialValues);
 
   const handleChange = (e) => {
@@ -53,6 +54,7 @@ function AddPost() {
       const formValuesWithEmail = {
         ...formValues,
         email: userInfo.attributes.email,
+        url: pictureURL,
       };
       const id = Math.floor(Math.random() * 1000);
       const url = `https://ccm0e7duj5.execute-api.ap-northeast-2.amazonaws.com/dev/create-post/${id}`;
@@ -77,7 +79,9 @@ function AddPost() {
   return (
     <Wrapper>
       <ToastContainer/>
-      <ImageUpload />
+      <ImageUpload
+        setPictureURL={setPictureURL}
+      />
       <PostForm
         onSubmit={handleSubmit}
       >

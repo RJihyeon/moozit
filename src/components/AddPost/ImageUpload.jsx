@@ -18,7 +18,7 @@ const UploadComponent = props => (
   </form>
 );
 
-const ImageUpload = () => {
+const ImageUpload = ({setPictureURL}) => {
   const [progress, setProgress] = useState('getUpload');
   const [url, setImageURL] = useState(undefined);
   const [errorMessage, setErrorMessage] = useState('');
@@ -53,6 +53,8 @@ const ImageUpload = () => {
             case 'uploading':
                 return <h2>Uploading....</h2>;
             case 'uploaded':
+                console.log(url);
+                setPictureURL(url);
                 return <img src={url} alt="uploaded" />;
             case 'uploadError':
                 return (
