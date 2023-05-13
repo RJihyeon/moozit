@@ -8,8 +8,25 @@ const CardWrapper = styled.div`
   padding: 1rem 1.2rem;
   background-color: #fff;
   border-radius: 1rem;
+  
   align-items: center;
-  border: 1px solid red;
+  border: 2px solid #c7b0b3;
+`;
+
+const Profile = styled.ul`
+width: 100%;
+display : flex;
+flex-direction : row;
+justify-content: left;
+align-items: left;
+
+gap : 1rem ; 
+
+ li{
+  color : black ; 
+  font-weight : 800 ;
+
+ }
 `;
 
 const CardTitle = styled.p`
@@ -27,5 +44,6 @@ const CardContent = styled.p`
 export { 
   CardWrapper, 
   CardTitle, 
-  CardContent 
+  CardContent ,
+  Profile,
 };
