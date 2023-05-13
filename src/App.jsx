@@ -8,6 +8,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import SplashPage from "./pages/SplashPage";
 import UserPage from "./pages/UserPage";
 import AddPostPage from "./pages/AddPostPage";
+import PostListPage from "./pages/PostListPage";
 
 Amplify.configure(awsconfig);
 
@@ -36,7 +37,8 @@ function App() {
           <Routes>
             <Route path="/" element={<SplashPage signOut={signOut} />} />
             <Route path="/user" element={<UserPage signOut={signOut} />} />
-            <Route path="/addPost" element={<AddPostPage signOut={signOut} />} />
+            <Route path="/addpost" element={<AddPostPage signOut={signOut} />} />
+            <Route path="/postlist" element={<PostListPage signOut={signOut} />} />
           </Routes>
         </BrowserRouter>
       )}
