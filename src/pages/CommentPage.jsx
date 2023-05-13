@@ -8,7 +8,6 @@ function CommentPage (){
 
   return(
     <>
-    <h1>안녕하세요</h1>
     <HeadComponent/>
     <Comment/>
     <Menu/>
