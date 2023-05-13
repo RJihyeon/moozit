@@ -16,3 +16,10 @@ body {
   );
 };
 
+.data-amplify-container.data-amplify-router{
+  background-color: #e7dddd;
+};
+
+.amplfy-flex amplify-tabs.amplify-tabs-item {
+  background-color: #e7dddd;
+};
