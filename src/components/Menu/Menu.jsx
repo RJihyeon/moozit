@@ -18,7 +18,7 @@ const Menu = ({ page }) => {
           <SlHeart size={22} color={page === 'like' ? '#006FFD' : '#FFFFFF' } />
           
         </li>
-        <li onClick={() => handleClick('/post')} onKeyUp={() => handleClick('/post')}>
+        <li onClick={() => handleClick('/postlist')} onKeyUp={() => handleClick('/postlist')}>
           <SlHome size={22} color={page === 'post' ? '#006FFD' : '#FFFFFF'} />
           
         </li>
