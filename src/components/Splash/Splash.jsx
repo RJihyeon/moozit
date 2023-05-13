@@ -43,7 +43,7 @@ function Splash() {
         </h2>
         <StartButton
           type="button"
-          onClick={() => addToken}
+          onClick={() => addToken()}
         >
           시작하기
         </StartButton>
