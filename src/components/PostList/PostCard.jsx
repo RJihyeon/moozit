@@ -2,17 +2,17 @@ import React from 'react';
 
 import { CardWrapper, CardTitle, CardContent } from "./PostCard.styles";
 
-function PostCard() {
+function PostCard({ email, title, content }) {
 
 
   return (
     <>
       <CardWrapper>
         <CardTitle>
-          임시야
+          {title}
         </CardTitle>
         <CardContent>
-          임시라구
+          {content}
         </CardContent>
       </CardWrapper>
     </>

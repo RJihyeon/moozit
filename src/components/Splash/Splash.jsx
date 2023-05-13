@@ -2,6 +2,8 @@ import axios from "axios";
 import React, { useEffect, useState, } from "react";
 import { Auth } from "aws-amplify";
 
+import { saveAccessToken } from "../../utils/token";
+
 import { Wrapper, SplashImage, StartButton, } from "./Splash.styles";
 
 function Splash() {
@@ -22,6 +24,7 @@ function Splash() {
 
   useEffect(() => {
     getAccessToken();
+    saveAccessToken(accessToken);
   }, []);
 
   const addToken = async () => {
@@ -34,6 +37,8 @@ function Splash() {
       console.log(e);
     }
   };
+
+  
 
   return (
     <>
