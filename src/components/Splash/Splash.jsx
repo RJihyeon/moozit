@@ -9,6 +9,7 @@ import Margin from "../Margin/Margin";
 
 import { Wrapper, SplashImage, StartButton, WrapperImg, BrandLogo} from "./Splash.styles";
 import companyLogo from './logo.png';
+import brandLogo from './brandlogo.png';
 
 
 function Splash() {
@@ -56,7 +57,7 @@ function Splash() {
           <SplashImage src={companyLogo}/>
         </WrapperImg>
         <WrapperImg>
-          <BrandLogo/>
+          <BrandLogo src={brandLogo}/>
         </WrapperImg>
         <StartButton
           type="button"

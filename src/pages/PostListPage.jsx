@@ -1,6 +1,6 @@
 import React from 'react';
 
-import Title from "../components/Title/Title";
+import HeadComponent from "../components/HeadComponent/HeadComponent";
 import PostList from "../components/PostList/PostList";
 import Margin from "../components/Margin/Margin";
 import Menu from "../components/Menu/Menu";
@@ -8,7 +8,7 @@ import Menu from "../components/Menu/Menu";
 function PostListPage() {
   return (
     <>
-      <Title text="게시" />
+      <HeadComponent />
       <PostList />
       <Margin />
       <Menu page="post" />
