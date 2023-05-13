@@ -48,7 +48,7 @@ const ProfileImage = styled.div`
   width: 4rem;
   height: 4rem;
   border-radius: 50rem;
-  background-color: #42e24f;
+  background-color: #e7dddd;
 `;
 
 const FollowContainer = styled.div`
