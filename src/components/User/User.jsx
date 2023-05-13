@@ -9,6 +9,10 @@ import {
   DateText,
   FollowContainer,
   FollowText,
+  CategoryContainer,
+  CategoryButton,
+  GridContainer,
+  Grid,
 } from "./User.styles";
 
 function User() {
@@ -36,6 +40,14 @@ function User() {
             </FollowText>
           </FollowContainer>
         </ProfileWrapper>
+        <CategoryContainer>
+          <CategoryButton>
+            Posted
+          </CategoryButton>
+          <CategoryButton>
+            Collection
+          </CategoryButton>
+        </CategoryContainer>
       </Wrapper>
     </>
   )

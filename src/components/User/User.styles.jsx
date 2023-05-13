@@ -14,7 +14,7 @@ const ProfileWrapper = styled.div`
   display: flex;
   flex-direction: row;
   padding: 1rem 2rem;
-  padding-top: 3rem;
+  padding-top: 4rem;
   justify-content: space-between;
   align-items: center;
 `;
@@ -62,27 +62,34 @@ const FollowText = styled.p`
   font-weight: 600;
 `;
 
-const UserInfo = styled.ul`
-  width: 80%;
-  display : flex;
-  margin: 10px ;
-  padding : 5px;
-  flex-direction : column;
-  justify-content: center; //좌우정렬
-  align-items: center; 
-  border : 1px solid red;
-  list-style : none;
+const CategoryContainer = styled.div`
+  padding: 1rem 2rem;
+  padding-top: 3rem;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+`;
 
-  li {
-    border : 1px solid blue ;
-    width: 100%;
-    display: flex;
-    flex-direction: row; //가로배열
-    justify-content: space-between; //좌우정렬
-    align-items: center; //위아래 정렬
-    list-style: none; //닷 없애기
-    padding : 10px;
-  }
+const CategoryButton = styled.button`
+  font-size: 1.4rem;
+  font-weight: 700;
+  background-color: #fff;
+  border-bottom: 1px solid red;
+`;
+
+const GridContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  padding: 1rem 2rem;
+`;
+
+const Grid = styled.div`
+  display: flex;
+  flex-direction: row;
+  width: 100%;
 `;
 
 export {
@@ -95,4 +102,8 @@ export {
   DateText,
   FollowContainer,
   FollowText,
+  CategoryContainer,
+  CategoryButton,
+  GridContainer,
+  Grid,
 };
