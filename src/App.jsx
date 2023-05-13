@@ -9,6 +9,7 @@ import SplashPage from "./pages/SplashPage";
 import UserPage from "./pages/UserPage";
 import AddPostPage from "./pages/AddPostPage";
 import PostListPage from "./pages/PostListPage";
+import LikePage from "./pages/LikePage";
 
 Amplify.configure(awsconfig);
 
@@ -39,6 +40,7 @@ function App() {
             <Route path="/user" element={<UserPage signOut={signOut} />} />
             <Route path="/addpost" element={<AddPostPage signOut={signOut} />} />
             <Route path="/postlist" element={<PostListPage signOut={signOut} />} />
+            <Route path="/like" element={<LikePage signOut={signOut} />} />
           </Routes>
         </BrowserRouter>
       )}

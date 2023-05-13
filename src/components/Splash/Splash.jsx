@@ -44,8 +44,8 @@ function Splash() {
     }
   };
 
-  const handleClick = () => {
-    addToken();
+  const handleClick = async () => {
+    await addToken();
     navigate("/postlist");
   }
 

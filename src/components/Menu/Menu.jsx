@@ -14,8 +14,8 @@ const Menu = ({ page }) => {
   return (
     <MenuWrapper>
       <MenuList>
-        <li onClick={() => handleClick('/select')} onKeyUp={() => handleClick('/select')}>
-          <SlHeart size={22} color={page === 'select' ? '#006FFD' : '#FFFFFF' } />
+        <li onClick={() => handleClick('/like')} onKeyUp={() => handleClick('/like')}>
+          <SlHeart size={22} color={page === 'like' ? '#006FFD' : '#FFFFFF' } />
           
         </li>
         <li onClick={() => handleClick('/post')} onKeyUp={() => handleClick('/post')}>
