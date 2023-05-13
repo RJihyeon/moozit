@@ -4,7 +4,9 @@ import { Auth } from "aws-amplify";
 
 import { saveAccessToken } from "../../utils/token";
 
-import { Wrapper, SplashImage, StartButton, } from "./Splash.styles";
+import { Wrapper, SplashImage, StartButton, WrapperImg, BrandLogo} from "./Splash.styles";
+import companyLogo from './logo.png';
+
 
 function Splash() {
   const [accessToken, setAccessToken] = useState('');
@@ -43,14 +45,18 @@ function Splash() {
   return (
     <>
       <Wrapper>
-        <h2>
-          스플래시
-        </h2>
-        <StartButton
+      <WrapperImg>
+        <SplashImage src={companyLogo}/>
+      </WrapperImg>
+
+      <WrapperImg>
+        <BrandLogo/>
+      </WrapperImg>
+        
+      <StartButton
           type="button"
-          onClick={() => addToken()}
-        >
-          시작하기
+          onClick={() => addToken()}>
+          Explore
         </StartButton>
       </Wrapper>
     </>
