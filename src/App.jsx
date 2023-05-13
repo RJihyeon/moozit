@@ -43,10 +43,7 @@ function App() {
             <Route path="/addpost" element={<AddPostPage signOut={signOut} />} />
             <Route path="/postlist" element={<PostListPage signOut={signOut} />} />
             <Route path="/like" element={<LikePage signOut={signOut} />} />
-            <Route path="/comment" element={<CommentPage signOut={signOut} />} />
-
-          
-          
+            <Route path="/postdetail" element={<CommentPage signOut={signOut} />} />
           </Routes>
         </BrowserRouter>
       )}

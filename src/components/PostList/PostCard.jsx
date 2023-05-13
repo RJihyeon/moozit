@@ -1,6 +1,12 @@
 import React from 'react';
 
-import { CardWrapper, CardTitle,Profile,CardPic } from "./PostCard.styles";
+import { 
+  CardWrapper, 
+  CardTitle,
+  Profile,
+  CardPic,
+  TextContainer,
+} from "./PostCard.styles";
 import { BsPersonCircle, BsSlack } from "react-icons/bs";
 
 function PostCard({ email, title, content }) {
@@ -14,12 +20,15 @@ function PostCard({ email, title, content }) {
           <li>mooziT</li>
         </Profile>
         <CardPic>
-          
+          임시 사진
         </CardPic>
-        <CardTitle>
-          {title}
-        </CardTitle>
-        
+        <TextContainer>
+          <TextContainer>
+            <CardTitle>
+              {title}
+            </CardTitle>
+          </TextContainer>
+        </TextContainer>
       </CardWrapper>
     </>
   )

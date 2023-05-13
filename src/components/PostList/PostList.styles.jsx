@@ -7,6 +7,13 @@ const Wrapper = styled.div`
 
 const Board = styled.div`
   width: 100%;
+  padding: 1rem;
 `;
 
-export { Wrapper, Board, }; 
+const Button = styled.button`
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+`;
+
+export { Wrapper, Board, Button, }; 

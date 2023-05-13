@@ -15,15 +15,15 @@ const Menu = ({ page }) => {
     <MenuWrapper>
       <MenuList>
         <li onClick={() => handleClick('/like')} onKeyUp={() => handleClick('/like')}>
-          <SlHeart size={22} color={page === 'like' ? '#006FFD' : '#FFFFFF' } />
+          <SlHeart size={22} color={page === 'like' ? '#591823' : '#FFFFFF' } />
           
         </li>
         <li onClick={() => handleClick('/postlist')} onKeyUp={() => handleClick('/postlist')}>
-          <SlHome size={22} color={page === 'post' ? '#006FFD' : '#FFFFFF'} />
+          <SlHome size={22} color={page === 'post' ? '#591823' : '#FFFFFF'} />
           
         </li>
         <li onClick={() => handleClick('/user')} onKeyUp={() => handleClick('/user')}>
-          <RxPerson size={22} color={page === 'user' ? '#006FFD' : '#FFFFFF'} />
+          <RxPerson size={22} color={page === 'user' ? '#591823' : '#FFFFFF'} />
           
         </li>
       </MenuList>

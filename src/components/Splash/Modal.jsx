@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import { ToastContainer, toast } from "react-toastify";
-
 import 'react-toastify/dist/ReactToastify.css';
 
 import { 
@@ -34,7 +33,7 @@ function Modal({addToken, nickname, setNickname, navigate}) {
         <ToastContainer />
         <Container>
           <Question>
-            닉네임을 적어주세용!
+            닉네임을 적어주세요!
           </Question>
           <AnswerInput
             type="text"
@@ -45,7 +44,7 @@ function Modal({addToken, nickname, setNickname, navigate}) {
             type="button"
             onClick={() => handleSubmit()}
           >
-            정말 시작하기
+            Let's Drink!
           </SubmitButton>
         </Container>
       </Wrapper>

@@ -13,25 +13,36 @@ const CardWrapper = styled.div`
 `;
 
 const Profile = styled.ul`
-width: 100%;
-display : flex;
-flex-direction : row;
-justify-content: left;
-align-items: left;
+  width: 100%;
+  display : flex;
+  flex-direction : row;
+  justify-content: left;
+  align-items: left;
+  gap : 1rem ; 
 
-gap : 1rem ; 
+  li  {
+      color : black ; 
+      font-weight : 800;
+    }
+`;
 
- li{
-  color : black ; 
-  font-weight : 800;
-
- }
+const TextContainer = styled.div`
+  width: 100%;
+  margin-top: 0.5rem;
+  margin-left: 0.25rem;
+  display: flex;
+  justify-content: flex-start;
 `;
 
 const CardPic = styled.div `
-background-color : black ; 
-width : 100%; 
-height : 5rem ; 
+  background-color : black ; 
+  width : 100%;
+  height : 200px;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 `;
 
 const CardTitle = styled.p`
@@ -50,4 +61,5 @@ export {
   CardTitle, 
   Profile,
   CardPic,
+  TextContainer,
 };

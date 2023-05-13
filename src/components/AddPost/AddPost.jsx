@@ -65,8 +65,13 @@ function AddPost() {
 
   const handleClick = async () => {
     await submitForm();
-    notify();
-    navigate('/postlist');
+    toast.success(<h1>성공적으로 글이 등록되었습니다! 😀</h1>, {
+      position: 'top-center',
+      autoClose: 1000,
+    });
+    setTimeout(() => {
+      navigate("/postlist");
+    }, 2000);
   }
   
   return (

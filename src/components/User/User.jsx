@@ -1,8 +1,8 @@
-import React from 'react';
+import axios from "axios";
+import React, { useState, useEffect } from "react";
 
-import drink from '../../drinkData.json';
-import { BsPersonCircle } from "react-icons/bs";
-
+import drink from "../../drinkData.json";
+import { getAccessToken } from "../../utils/token";
 import {
   Wrapper,
   ProfileWrapper,
@@ -23,8 +23,31 @@ import {
 } from "./User.styles";
 
 function User() {
-
   console.log(drink);
+  const accessToken = getAccessToken([]);
+  const [ userInfo, setUserInfo ] = useState("닉네임");
+  const [ isClicked, setIsClicked ] = useState(false);
+
+  useEffect(() => {
+    console.log(accessToken, '왜');
+    getUserInfo();
+  }, []);
+
+  const getUserInfo = async () => {
+    try {
+      const config = {
+        headers: {
+          'X-Amz-Security-Token': accessToken
+        }
+      };
+      const url = `https://ccm0e7duj5.execute-api.ap-northeast-2.amazonaws.com/dev/get-token-info/${accessToken}`;
+      const data = await axios.get(url, config);
+      setUserInfo(data.data.token.nickname);
+      console.log(data.data.token.nickname);
+    } catch (e) {
+      console.log(e);
+    }
+  };
 
   return (
     <>
@@ -32,7 +55,7 @@ function User() {
         <ProfileWrapper>
           <NameContainer>
             <NameText>
-              mooziT
+              {userInfo}
             </NameText>
             <DateText>
               Since 2023

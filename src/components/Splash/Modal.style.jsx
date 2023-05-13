@@ -25,6 +25,7 @@ const Container = styled.form`
   left: 50%;
   transform: translate(-50%, -50%);
   border-radius: 12px;
+  gap: 1rem;
 `;
 
 const Question = styled.h1`
@@ -34,11 +35,17 @@ const Question = styled.h1`
 
 const AnswerInput = styled.input`
   border-radius: 1rem;
-
+  line-height: 2rem;
+  padding-left: 1rem;
 `;
 
 const SubmitButton = styled.button`
   border-radius: 1rem;
+  font-size: 1.1rem;
+  font-weight: 600;
+  line-height: 2.4rem;
+  background-color: #591823;
+  color: #fff;
 `;
 
 export {
