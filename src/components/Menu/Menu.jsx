@@ -18,12 +18,12 @@ const Menu = ({ page }) => {
           <SlHeart size={22} color={page === 'select' ? '#006FFD' : '#FFFFFF' } />
           
         </li>
-        <li onClick={() => handleClick('/partyList')} onKeyUp={() => handleClick('/select')}>
-          <SlHome size={22} color={page === 'partyList' ? '#006FFD' : '#FFFFFF'} />
+        <li onClick={() => handleClick('/post')} onKeyUp={() => handleClick('/post')}>
+          <SlHome size={22} color={page === 'post' ? '#006FFD' : '#FFFFFF'} />
           
         </li>
-        <li onClick={() => handleClick('/mypage')} onKeyUp={() => handleClick('/select')}>
-          <RxPerson size={22} color={page === 'mypage' ? '#006FFD' : '#FFFFFF'} />
+        <li onClick={() => handleClick('/user')} onKeyUp={() => handleClick('/user')}>
+          <RxPerson size={22} color={page === 'user' ? '#006FFD' : '#FFFFFF'} />
           
         </li>
       </MenuList>
