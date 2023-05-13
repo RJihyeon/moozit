@@ -11,6 +11,7 @@ function AddPostPage() {
       <AddPost />
       <Margin />
       <Menu page="post"/>
+      
    
     </>
   )

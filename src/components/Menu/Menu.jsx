@@ -15,15 +15,15 @@ const Menu = ({ page }) => {
     <MenuWrapper>
       <MenuList>
         <li onClick={() => handleClick('/select')} onKeyUp={() => handleClick('/select')}>
-          <SlHeart size={22} color={page === 'select' ? '#006FFD' : '#71727A'} />
+          <SlHeart size={22} color={page === 'select' ? '#006FFD' : '#FFFFFF' } />
           
         </li>
         <li onClick={() => handleClick('/partyList')} onKeyUp={() => handleClick('/select')}>
-          <SlHome size={22} color={page === 'partyList' ? '#006FFD' : '#71727A'} />
+          <SlHome size={22} color={page === 'partyList' ? '#006FFD' : '#FFFFFF'} />
           
         </li>
         <li onClick={() => handleClick('/mypage')} onKeyUp={() => handleClick('/select')}>
-          <RxPerson size={22} color={page === 'mypage' ? '#006FFD' : '#71727A'} />
+          <RxPerson size={22} color={page === 'mypage' ? '#006FFD' : '#FFFFFF'} />
           
         </li>
       </MenuList>
