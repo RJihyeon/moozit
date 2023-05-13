@@ -68,9 +68,6 @@ function AddPost() {
       <PostForm
         onSubmit={handleSubmit}
       >
-        <AddImage
-          setImage={setImage} previewURL={image.previewURL}
-        />
         <Label htmlFor="title">
           Title
         </Label>
