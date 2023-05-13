@@ -8,6 +8,7 @@ const MenuWrapper = styled.div`
 `;
 
 const MenuList = styled.ul`
+  background-color : #9c8779;
   max-width: 600px;
   margin: 0 auto;
   height: 70px;
@@ -15,7 +16,7 @@ const MenuList = styled.ul`
   align-items: center;
   justify-content: center;
   box-shadow: 0 -1px 10px ${(props) => props.theme.color.light_200};
-  background-color: ${(props) => props.theme.color.white};
+  background-color: #9c8779;;
 
   li {
     width: 25%;
