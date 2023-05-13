@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { CardWrapper, CardTitle, CardContent,Profile } from "./PostCard.styles";
+import { CardWrapper, CardTitle,Profile } from "./PostCard.styles";
 import { BsPersonCircle, BsSlack } from "react-icons/bs";
 
 function PostCard({ email, title, content }) {
@@ -16,9 +16,7 @@ function PostCard({ email, title, content }) {
         <CardTitle>
           {title}
         </CardTitle>
-        <CardContent>
-          {content}
-        </CardContent>
+        
       </CardWrapper>
     </>
   )
