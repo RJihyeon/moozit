@@ -27,13 +27,14 @@ const NameContainer = styled.div`
 `;
 
 const NameText = styled.h2`
-  font-size: 2rem;
+  font-size: 1.5rem;
   font-weight: 800;
 `;
 
 const DateText = styled.h3`
   font-size: 1rem;
-  font-weight: 500;
+  font-weight: 700;
+  color : #9a8f8f;
 `;
 
 const ProfileImageContainer = styled.div`
@@ -75,8 +76,9 @@ const CategoryContainer = styled.div`
 const CategoryButton = styled.button`
   font-size: 1.4rem;
   font-weight: 700;
-  background-color: #fff;
-  border-bottom: 1px solid red;
+  background-color: #fefafa;
+  border-bottom: 3px solid #591823;
+  color : #591823;
 `;
 
 const GridContainer = styled.div`
@@ -102,7 +104,7 @@ const DrinkImageContainer = styled.div`
 const DrinkImage = styled.div`
   padding: 1rem 1rem;
   border-radius: 12px;
-  border: 1px solid red;
+  border: 1px solid #591823;
   background-size: contain;
   width: 120px;
   height: 120px;

@@ -1,6 +1,7 @@
 import React from 'react';
 
 import drink from '../../drinkData.json';
+import { BsPersonCircle } from "react-icons/bs";
 
 import {
   Wrapper,
@@ -31,7 +32,7 @@ function User() {
         <ProfileWrapper>
           <NameContainer>
             <NameText>
-              닉네임
+              mooziT
             </NameText>
             <DateText>
               Since 2023
