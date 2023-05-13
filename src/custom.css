@@ -3,6 +3,10 @@ body {
   font-family: 'Nanum Gothic', sans-serif;
 }
 
+div {
+  background-color: #E7DDDD;
+}
+
 .amplify-flex .amplify-label {
   font-size: 20px;
 
@@ -16,10 +20,5 @@ body {
   );
 };
 
-.data-amplify-container.data-amplify-router{
-  background-color: #e7dddd;
-};
 
-.amplfy-flex amplify-tabs.amplify-tabs-item {
-  background-color: #e7dddd;
-};
+
