@@ -1,4 +1,3 @@
-import './App.css';
 import { Amplify, API, Auth } from 'aws-amplify';
 import '@aws-amplify/ui-react/styles.css';
 import './custom.css';

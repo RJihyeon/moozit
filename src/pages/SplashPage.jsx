@@ -1,8 +1,13 @@
 import React from 'react';
+import { Wrapper, SplashImage } from "../components/Splash/Splash.styles";
 
 function SplashPage() {
+
   return (
-    <div>SplashPage</div>
+    <>
+      <Wrapper>
+      </Wrapper>
+    </>
   )
 };
 
