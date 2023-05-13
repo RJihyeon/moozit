@@ -3,60 +3,48 @@ import ImageUploader from 'react-images-upload';
 import Axios from 'axios';
 
 const UploadComponent = props => (
-    <form>
-        <label>
-            File Upload URL:
-            <input id="urlInput" type="text" onChange={props.onUrlChange} value={props.url}/>
-        </label>
-        <ImageUploader
-            key="image-uploader"
-            withIcon={true}
-            singleImage={true}
-            withPreview={true}
-            label="Maximum size file: 5MB"
-            buttonText="Choose an image"
-            onChange={props.onImage}
-            imgExtension={['.jpg', '.png', '.jpeg']}
-            maxFileSize={5242880}
-        />
-    </form>
+  <form>
+    <ImageUploader
+      key="image-uploader"
+      withIcon={true}
+      singleImage={true}
+      withPreview={true}
+      label="Maximum size file: 5MB"
+      buttonText="Choose an image"
+      onChange={props.onImage}
+      imgExtension={['.jpg', '.png', '.jpeg']}
+      maxFileSize={5242880}
+    />
+  </form>
 );
 
 const ImageUpload = () => {
-    const [progress, setProgress] = useState('getUpload');
-    const [url, setImageURL] = useState(undefined);
-    const [errorMessage, setErrorMessage] = useState('');
+  const [progress, setProgress] = useState('getUpload');
+  const [url, setImageURL] = useState(undefined);
+  const [errorMessage, setErrorMessage] = useState('');
 
-    const onUrlChange = e => {
-        setImageURL(e.target.value);
-    };
+  const onUrlChange = e => {
+    setImageURL(e.target.value);
+  };
 
-    const onImage = async (failedImages, successImages) => {
-        if (!url) {
-            console.log('missing Url');
-            setErrorMessage('missing a url to upload to');
-            setProgress('uploadError');
-            return;
-        }
+  const onImage = async (failedImages, successImages) => {
+  setProgress('uploading');
 
-        setProgress('uploading');
-
-        try {
-            console.log('successImages', successImages);
-            const parts = successImages[0].split(';');
-            const mime = parts[0].split(':')[1];
-            const name = parts[1].split('=')[1];
-            const data = parts[2];
-            const res = await Axios.post(url, { mime, name, image: data });
-
-            setImageURL(res.data.imageURL);
-            setProgress('uploaded');
-        } catch (error) {
-            console.log('error in upload', error);
-            setErrorMessage(error.message);
-            setProgress('uploadError');
-        }
-    };
+  try {
+    console.log('successImages', successImages);
+    const parts = successImages[0].split(';');
+    const mime = parts[0].split(':')[1];
+    const name = parts[1].split('=')[1];
+    const data = parts[2];
+    const res = await Axios.post("https://ccm0e7duj5.execute-api.ap-northeast-2.amazonaws.com/dev/image-upload", { mime, name, image: data });
+      setImageURL(res.data.imageURL);
+      setProgress('uploaded');
+    } catch (error) {
+      console.log('error in upload', error);
+      setErrorMessage(error.message);
+      setProgress('uploadError');
+    }
+  };
 
     const content = () => {
         switch (progress) {
@@ -78,7 +66,6 @@ const ImageUpload = () => {
 
     return (
         <div className="ImageUpload">
-            <h1>Image Upload Website</h1>
             {content()}
         </div>
     );
