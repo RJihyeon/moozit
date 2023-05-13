@@ -1,8 +1,12 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import { Auth } from 'aws-amplify';
+
 import AddImage from "./AddImage";
+import ImageUpload from "./ImageUpload";
+
 import { getAccessToken } from "../../utils/token";
+
 import {
   Wrapper,
   PostForm,
@@ -15,10 +19,6 @@ import {
 
 function AddPost() {
   const accessToken = getAccessToken([]);
-  const [image, setImage] = useState({
-    imageFile: "",
-    previewURL: "https://i.pinimg.com/736x/93/a6/8b/93a68b57a54e4bdc73d43d1d049b94b3.jpg",
-  });
 
   const initialValues = {
     title: '',
@@ -64,6 +64,7 @@ function AddPost() {
   
   return (
     <Wrapper>
+      <ImageUpload />
       <PostForm
         onSubmit={handleSubmit}
       >
