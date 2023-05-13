@@ -4,6 +4,8 @@ import { Auth } from "aws-amplify";
 
 import { saveAccessToken } from "../../utils/token";
 
+import Margin from "../Margin/Margin";
+
 import { Wrapper, SplashImage, StartButton, WrapperImg, BrandLogo} from "./Splash.styles";
 import companyLogo from './logo.png';
 
@@ -45,19 +47,18 @@ function Splash() {
   return (
     <>
       <Wrapper>
-      <WrapperImg>
-        <SplashImage src={companyLogo}/>
-      </WrapperImg>
-
-      <WrapperImg>
-        <BrandLogo/>
-      </WrapperImg>
-        
-      <StartButton
+        <WrapperImg>
+          <SplashImage src={companyLogo}/>
+        </WrapperImg>
+        <WrapperImg>
+          <BrandLogo/>
+        </WrapperImg>
+        <StartButton
           type="button"
           onClick={() => addToken()}>
           Explore
         </StartButton>
+        <Margin />
       </Wrapper>
     </>
   )

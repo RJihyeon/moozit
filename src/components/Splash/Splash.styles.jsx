@@ -4,12 +4,13 @@ const Wrapper = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: center;
+  background-color: #fefafa;
 `;
 
 const WrapperImg = styled.div`
-border : 1px solid blue;
-margin :  100px 10px ; 
-
+  border : 1px solid blue;
+  margin :  100px 10px ; 
+  background-color: #fefafa;
 `;
 
 
@@ -17,8 +18,6 @@ const SplashImage = styled.img`
   width: 100%;
   object-fit: cover ;
   border : 1px solid red;
-  
-  
 `;
 
 const BrandLogo = styled.img``;
