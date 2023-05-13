@@ -6,8 +6,10 @@ import {
   Wrapper, 
   PostForm, 
   Label,
+  Photo,
   CustomInput, 
   CustomTextArea,
+  SelectType,
   SubmitButton,
 } from "./AddPost.styles";
 
@@ -52,8 +54,15 @@ function AddPost() {
       <PostForm
         onSubmit={handleSubmit}
       >
+         <Label htmlFor="title">
+          Photo
+        </Label>
+        <Photo>
+
+        </Photo>
+
         <Label htmlFor="title">
-          제목
+          Title
         </Label>
         <CustomInput
           type="text"
@@ -62,15 +71,20 @@ function AddPost() {
           onChange={handleChange}
         />
         <Label htmlFor="content">
-          내용
+          Description
         </Label>
         <CustomTextArea
           name="content"
           defaultValue={formValues.content}
           onChange={handleChange}
         />
+        <Label htmlFor="content">
+          Alcohol Types
+        </Label>
+        <SelectType ></SelectType>
+
         <SubmitButton type="submit" onClick={submitForm}>
-          등록하기
+          Upload Post
         </SubmitButton>
       </PostForm>
     </Wrapper>
