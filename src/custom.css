@@ -1,0 +1,16 @@
+/* 전체 폰트 설정 */
+body {
+  font-family: 'Noto Sans KR', sans-serif;
+}
+
+.amplify-flex .amplify-label {
+  font-size: 20px;
+}
+
+.amplify-button[data-variation='primary'] {
+  background: linear-gradient(
+    to right,
+    #dc3545,
+    #0055b8
+  );
+};
