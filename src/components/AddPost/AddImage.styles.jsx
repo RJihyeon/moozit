@@ -1,10 +1,13 @@
 import styled from "styled-components";
 
+
 const Wrapper = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
   width: 100%;
+  
+  
 `;
 
 const Preview = styled.img`
@@ -22,6 +25,9 @@ const Label = styled.label`
   line-height: normal;
   vertical-align: middle;
   cursor: pointer;
+  font-weight: 700;
+  font-size: 1rem;
+  
 `;
 
 export { Wrapper, Preview, Label, };
