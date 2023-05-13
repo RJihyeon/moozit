@@ -10,4 +10,9 @@ const SplashImage = styled.img`
 
 `;
 
-export { Wrapper, SplashImage, };
+const StartButton = styled.button`
+  border-radius: 12px;
+  background-color: blue;
+`;
+
+export { Wrapper, SplashImage, StartButton, };
