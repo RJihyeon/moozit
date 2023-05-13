@@ -1,6 +1,7 @@
 import axios from "axios";
 import React, { useEffect, useState, } from "react";
 import { Auth } from "aws-amplify";
+import { useNavigate } from "react-router-dom";
 
 import { saveAccessToken } from "../../utils/token";
 
@@ -11,6 +12,7 @@ import companyLogo from './logo.png';
 
 
 function Splash() {
+  const navigate = useNavigate();
   const [accessToken, setAccessToken] = useState('');
   const [email, setEmail] = useState('');
 
@@ -42,7 +44,10 @@ function Splash() {
     }
   };
 
-  
+  const handleClick = () => {
+    addToken();
+    navigate("/postlist");
+  }
 
   return (
     <>
@@ -55,7 +60,7 @@ function Splash() {
         </WrapperImg>
         <StartButton
           type="button"
-          onClick={() => addToken()}>
+          onClick={() => handleClick()}>
           Explore
         </StartButton>
         <Margin />
