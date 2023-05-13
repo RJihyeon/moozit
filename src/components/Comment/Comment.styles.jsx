@@ -18,21 +18,24 @@ display : flex;
 flex-direction : row;
 justify-content: left;
 align-items: left;
-
 gap : 1rem ; 
-
  li{
   color : black ; 
   font-weight : 800;
-
-
  }
 `;
 
-const CardPic = styled.div `
-background-color : #e7dddd ; 
-width : 100%; 
-height : 8rem ; 
+const CardPic = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+`;
+
+const Picture = styled.img`
+  width: 200px;
+  height: 200px;
+  object-fit: contain;
 `;
 
 const Title = styled.p`
@@ -58,7 +61,6 @@ margin-top : 10px;
 p{
 font-weight : 800;
 color : #383636;
-
 };
 `;
 
@@ -78,18 +80,20 @@ li{
 `;
 
 const AddComment=styled.ul`
-display : flex; 
-display - flex : row ; 
-gap : 10px ; 
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
 
 
 li{
-  padding-top : 10px ; 
+  padding-top : 0.5rem ; 
 }
 
 input{
+  padding: 0 1.5rem;
   height : 50px;
-  width : 100% ;
+  flex: 1;
   background-color : #f3eeee;
   border : none ; 
   border-radius : 6px ; 
@@ -101,11 +105,41 @@ button {
   background-color : #591823;
   color : white ; 
   height : 50px;
-  padding : 3px 20px ;
+  padding : 3px 10px ;
 };
+`;
 
+const CommentContainer = styled.div`
+  margin: 1rem 0;
+  padding: 1rem 1rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+`;  
+
+const CommentName = styled.p`
+  font-size: 1rem;
+  font-weight: 600;
+`;
+
+const CommentText = styled.p`
+  font-size: 1rem;
+  font-weight: 400;
 `;
 
 
 
-export {AddComment,CardWrapper,Profile,CardPic,Title,PostWrapper,Alcohol};
+export {
+  AddComment,
+  CardWrapper,
+  Profile,
+  CardPic,
+  Title,
+  PostWrapper,
+  Alcohol,
+  Picture,
+  CommentContainer,
+  CommentName,
+  CommentText,
+};

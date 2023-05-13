@@ -34,15 +34,17 @@ const TextContainer = styled.div`
   justify-content: flex-start;
 `;
 
-const CardPic = styled.div `
-  background-color : black ; 
-  width : 100%;
-  height : 200px;
-  color: #fff;
+const CardPictureContainer = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+`;
+
+const CardPic = styled.img`
+  width: 200px;
+  height: 200px;
+  object-fit: contain;
 `;
 
 const CardTitle = styled.p`
@@ -60,6 +62,7 @@ export {
   CardWrapper, 
   CardTitle, 
   Profile,
+  CardPictureContainer,
   CardPic,
   TextContainer,
 };

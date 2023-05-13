@@ -24,7 +24,7 @@ function PostList() {
           'X-Amz-Security-Token': accessToken
         }
       };
-      const data = await axios.get("https://ccm0e7duj5.execute-api.ap-northeast-2.amazonaws.com/dev/get-post-all", config);
+    const data = await axios.get("https://ccm0e7duj5.execute-api.ap-northeast-2.amazonaws.com/dev/get-post-all", config);
       setAllPost(data.data.posts);
       console.log(data.data.posts);
     } catch (e) {
@@ -43,13 +43,15 @@ function PostList() {
           {allPost ? allPost.map((post) => (
             <Button
               type="button"
-              onClick={() => handleClick(post.ID, post.email, post.title, post.content)}
+              onClick={() => navigate(`../postdetail/${post.ID}`, { state: { nickname: post.nickname, title: post.title, content: post.content, url: post.url, drink: post.drink }})}
             >
               <PostCard
                 key={post.ID}
                 email={post.email}
                 title={post.title}
                 content={post.content}
+                url={post.url}
+                nickname={post.nickname}
               />
             </Button>
           )) : <></>}

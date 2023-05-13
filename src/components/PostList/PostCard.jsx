@@ -6,11 +6,11 @@ import {
   Profile,
   CardPic,
   TextContainer,
+  CardPictureContainer,
 } from "./PostCard.styles";
 import { BsPersonCircle, BsSlack } from "react-icons/bs";
 
-function PostCard({ email, title, content }) {
-
+function PostCard({ email, title, content, url, post }) {
 
   return (
     <>
@@ -19,9 +19,9 @@ function PostCard({ email, title, content }) {
           <li><BsPersonCircle size={30} color='#c4bbb7'/></li>
           <li>mooziT</li>
         </Profile>
-        <CardPic>
-          임시 사진
-        </CardPic>
+        <CardPictureContainer>
+          <CardPic src={url} alt="사진"/>
+        </CardPictureContainer>
         <TextContainer>
           <TextContainer>
             <CardTitle>

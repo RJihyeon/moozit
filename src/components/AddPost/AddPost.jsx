@@ -54,6 +54,7 @@ function AddPost() {
       const formValuesWithEmail = {
         ...formValues,
         email: userInfo.attributes.email,
+        nickname: userInfo.attributes.nickname,
         url: pictureURL,
       };
       const id = Math.floor(Math.random() * 1000);
