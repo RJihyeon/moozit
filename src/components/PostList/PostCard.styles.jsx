@@ -24,26 +24,25 @@ gap : 1rem ;
 
  li{
   color : black ; 
-  font-weight : 800 ;
+  font-weight : 800;
 
  }
 `;
 
 const CardTitle = styled.p`
+  width : 100%
+  border: 1px solid red;
+  padding-right: 1rem;
   margin-bottom: 0.2rem;
   font-size: 1rem;
   font-weight: 600;
   line-height: 1.2rem;
 `;
 
-const CardContent = styled.p`
-  width: 100%;
-  padding-right: 1rem;
-`;
+
 
 export { 
   CardWrapper, 
   CardTitle, 
-  CardContent ,
   Profile,
 };
