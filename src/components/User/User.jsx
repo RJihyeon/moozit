@@ -1,4 +1,7 @@
 import React from 'react';
+
+import drink from '../../drinkData.json';
+
 import {
   Wrapper,
   ProfileWrapper,
@@ -13,9 +16,15 @@ import {
   CategoryButton,
   GridContainer,
   Grid,
+  DrinkImage,
+  DrinkImageContainer,
+  DrinkText,
 } from "./User.styles";
 
 function User() {
+
+  console.log(drink);
+
   return (
     <>
       <Wrapper>
@@ -48,6 +57,28 @@ function User() {
             Collection
           </CategoryButton>
         </CategoryContainer>
+        <GridContainer>
+          <DrinkText>
+            Whiskey
+          </DrinkText>
+          <Grid>
+          {drink.whiskey.map((item, index) => (
+            <DrinkImageContainer>
+              <DrinkImage style={{ backgroundImage: `url(${item.link})` }}/>
+            </DrinkImageContainer>
+          ))}
+          </Grid>
+          <DrinkText>
+            Beer
+          </DrinkText>
+          <Grid>
+          {drink.beer.map((item, index) => (
+            <DrinkImageContainer>
+              <DrinkImage style={{ backgroundImage: `url(${item.link})` }}/>
+            </DrinkImageContainer>
+          ))}
+          </Grid>
+        </GridContainer>
       </Wrapper>
     </>
   )

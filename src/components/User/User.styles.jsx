@@ -90,6 +90,29 @@ const Grid = styled.div`
   display: flex;
   flex-direction: row;
   width: 100%;
+  overflow-x: auto;
+  gap: 1rem;
+`;
+
+const DrinkImageContainer = styled.div`
+  width: 120px;
+  height: 120px;
+`;
+
+const DrinkImage = styled.div`
+  padding: 1rem 1rem;
+  border-radius: 12px;
+  border: 1px solid red;
+  background-size: contain;
+  width: 120px;
+  height: 120px;
+`;
+
+const DrinkText = styled.div`
+  padding-top: 1rem;
+  padding-bottom: 0.5rem;
+  font-size: 1rem;
+  font-weight: 600;
 `;
 
 export {
@@ -106,4 +129,7 @@ export {
   CategoryButton,
   GridContainer,
   Grid,
+  DrinkImageContainer,
+  DrinkImage,
+  DrinkText,
 };
