@@ -1,8 +1,10 @@
 import React from 'react';
 
+import User from "../components/User/User";
+
 function UserPage() {
   return (
-    <div>UserPage</div>
+    <User/>
   )
 };
 
