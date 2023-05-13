@@ -6,12 +6,14 @@ const TitleContainer = styled.div`
   justify-content: center;
   align-items: center;
   width: 100%;
+  height : 4rem;
+  background-color : #c7b0b3;
 `;
 
 const TitleText = styled.h1`
   font-size : 2rem;  
-  font-weight : 800;
-  color : #323232;
+  font-weight : 900;
+  color : #591823;
 
 `;
 

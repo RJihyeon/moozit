@@ -1,46 +1,36 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import { Auth } from 'aws-amplify';
-
 import AddImage from "./AddImage";
 import { getAccessToken } from "../../utils/token";
-
-import { 
-  Wrapper, 
-  PostForm, 
+import {
+  Wrapper,
+  PostForm,
   Label,
-  Photo,
-  CustomInput, 
+  CustomInput,
   CustomTextArea,
   SelectType,
   SubmitButton,
 } from "./AddPost.styles";
-
-
 function AddPost() {
   const accessToken = getAccessToken([]);
   const [image, setImage ] = useState({
     imageFile: "",
     previewURL: "https://i.pinimg.com/736x/93/a6/8b/93a68b57a54e4bdc73d43d1d049b94b3.jpg",
   });
-
   const initialValues = {
     title: '',
     content: '',
     drink: '',
   };
-
   const [formValues, setFormValues] = useState(initialValues);
-
   const handleChange = (e) => {
     const { name, value } = e.target;
     setFormValues({...formValues, [name]: value });
   };
-
   const handleSubmit = (e) => {
     e.preventDefault();
   }
-
   const submitForm = async () => {
     try {
       const config = {
@@ -61,7 +51,6 @@ function AddPost() {
       console.log(e);
     }
   };
-  
   return (
     <Wrapper>
       <PostForm
@@ -103,5 +92,4 @@ function AddPost() {
     </Wrapper>
   );
 };
-
 export default AddPost;
