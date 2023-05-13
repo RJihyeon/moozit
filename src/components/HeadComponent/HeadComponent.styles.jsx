@@ -26,5 +26,14 @@ li{
 }
 `;
 
+const Button = styled.button`
+  background-color: #c7b0b3;
 
-export {HeadContainer, HeadImg,HeadIcon};
+`;
+
+export {
+  HeadContainer, 
+  HeadImg,
+  HeadIcon, 
+  Button, 
+};

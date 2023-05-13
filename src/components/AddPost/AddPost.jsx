@@ -1,8 +1,10 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import { Auth } from 'aws-amplify';
+import { useNavigate } from 'react-router-dom';
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
-import AddImage from "./AddImage";
 import ImageUpload from "./ImageUpload";
 
 import { getAccessToken } from "../../utils/token";
@@ -18,6 +20,7 @@ import {
 } from "./AddPost.styles";
 
 function AddPost() {
+  const navigate = useNavigate();
   const accessToken = getAccessToken([]);
 
   const initialValues = {
@@ -25,6 +28,8 @@ function AddPost() {
     content: '',
     drink: '',
   };
+
+  const notify = () => toast("성공적으로 글을 등록했습니다!");
 
   const [formValues, setFormValues] = useState(initialValues);
 
@@ -58,12 +63,15 @@ function AddPost() {
     }
   };
 
-  const handleClick = () => {
-    submitForm();
+  const handleClick = async () => {
+    await submitForm();
+    notify();
+    navigate('/postlist');
   }
   
   return (
     <Wrapper>
+      <ToastContainer/>
       <ImageUpload />
       <PostForm
         onSubmit={handleSubmit}

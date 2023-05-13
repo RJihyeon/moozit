@@ -10,9 +10,7 @@ function AddPostPage() {
       <Title text="Create Post"/>
       <AddPost />
       <Margin />
-      <Menu page="post"/>
-      
-   
+      <Menu page="post"/>      
     </>
   )
 };
