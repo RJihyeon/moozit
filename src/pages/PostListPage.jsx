@@ -8,7 +8,7 @@ import Menu from "../components/Menu/Menu";
 function PostListPage() {
   return (
     <>
-      <Title text="게시글" />
+      <Title text="게시" />
       <PostList />
       <Margin />
       <Menu page="post" />
