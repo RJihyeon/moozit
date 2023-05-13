@@ -8,8 +8,7 @@ const CardWrapper = styled.div`
   padding: 1rem 1.2rem;
   background-color: #fff;
   border-radius: 1rem;
-  
-  align-items: center;
+  align-items: left;
   border: 2px solid #c7b0b3;
 `;
 
@@ -29,10 +28,15 @@ gap : 1rem ;
  }
 `;
 
+const CardPic = styled.div `
+background-color : black ; 
+width : 100%; 
+height : 5rem ; 
+`;
+
 const CardTitle = styled.p`
   width : 100%
   border: 1px solid red;
-  padding-right: 1rem;
   margin-bottom: 0.2rem;
   font-size: 1rem;
   font-weight: 600;
@@ -45,4 +49,5 @@ export {
   CardWrapper, 
   CardTitle, 
   Profile,
+  CardPic,
 };
