@@ -1,6 +1,7 @@
 /* 전체 폰트 설정 */
 body {
   font-family: 'Nanum Gothic', sans-serif;
+
 }
 
 [data-amplify-authenticator] [data-amplify-router] {
@@ -41,3 +42,6 @@ body {
   color: #591823;
 }
 
+.amplify-tabs-item[data-spacing] {
+  color: #591823;
+}
