@@ -27,6 +27,7 @@ const MenuList = styled.ul`
     justify-content: center;
     padding: 0.5rem;
     font-size: 0.8rem;
+    
     color: ${(props) => props.theme.color.dark_100};
 
     svg {
