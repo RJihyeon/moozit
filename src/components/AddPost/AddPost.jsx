@@ -2,6 +2,8 @@ import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import { Auth } from 'aws-amplify';
 
+import AddImage from "./AddImage";
+
 import { 
   Wrapper, 
   PostForm, 
@@ -15,10 +17,15 @@ import {
 
 
 function AddPost() {
+  const [image, setImage ] = useState({
+    imageFile: "",
+    previewURL: "https://i.pinimg.com/736x/93/a6/8b/93a68b57a54e4bdc73d43d1d049b94b3.jpg",
+  });
 
   const initialValues = {
     title: '',
     content: '',
+    drink: '',
   };
 
   const [formValues, setFormValues] = useState(initialValues);
@@ -30,7 +37,6 @@ function AddPost() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-
   }
 
   const submitForm = async () => {
@@ -54,13 +60,9 @@ function AddPost() {
       <PostForm
         onSubmit={handleSubmit}
       >
-         <Label htmlFor="title">
-          Photo
-        </Label>
-        <Photo>
-
-        </Photo>
-
+        <AddImage
+          setImage={setImage} previewURL={image.previewURL}
+        />
         <Label htmlFor="title">
           Title
         </Label>
@@ -78,11 +80,15 @@ function AddPost() {
           defaultValue={formValues.content}
           onChange={handleChange}
         />
-        <Label htmlFor="content">
+        <Label htmlFor="drink">
           Alcohol Types
         </Label>
-        <SelectType ></SelectType>
-
+        <SelectType
+          type="text"
+          name="drink"
+          defaultValue={formValues.drink}
+          onChange={handleChange}
+        />
         <SubmitButton type="submit" onClick={submitForm}>
           Upload Post
         </SubmitButton>
