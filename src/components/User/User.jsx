@@ -27,8 +27,6 @@ function User() {
           <span>100,000$</span>
         </li>
       </UserInfo>
-
-
     </Wrapper>
     </Body>
   )

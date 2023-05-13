@@ -3,7 +3,7 @@ body {
   font-family: 'Nanum Gothic', sans-serif;
 }
 
-div {
+[data-amplify-authenticator] [data-amplify-router] {
   background-color: #E7DDDD;
 }
 
@@ -12,16 +12,32 @@ div {
 
 }
 
+.amplify-input {
+  background: #ffffff;
+}
+
 .amplify-button[data-variation='primary'] {
   background: #591823;
   border-radius: 8px;
 };
 
-.amplify-tabs-item[data-state="active"] {
-  color:  #591823;
+.amplify-tabs-item[data-state=active] {
+  color: #591823;
   border-color:  #591823;
   background-color:  #591823;
   transition-property: none;
 }
 
+.amplify-tabs-item:hover {
+  color: #591823;
+  cursor: pointer;
+}
+
+.amplify-tabs-item:focus {
+  color: #591823;
+}
+
+.amplify-tabs-item:active {
+  color: #591823;
+}
 
