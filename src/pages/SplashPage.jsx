@@ -1,13 +1,10 @@
 import React from 'react';
-import { Wrapper, SplashImage } from "../components/Splash/Splash.styles";
+import Splash from "../components/Splash/Splash";
 
 function SplashPage() {
 
   return (
-    <>
-      <Wrapper>
-      </Wrapper>
-    </>
+    <Splash />
   )
 };
 
