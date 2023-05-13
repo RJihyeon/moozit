@@ -31,13 +31,15 @@ function App() {
 
   return (
     <Authenticator services={services} initialState="signUp">
-      <BrowserRouter>
-        <Routes>
-          <Route path="/" element={<SplashPage />} />
-          <Route path="/user" element={<UserPage />} />
-          <Route path="/addPost" element={<AddPostPage />} />
-        </Routes>
-      </BrowserRouter>
+      {({ signOut }) => (
+        <BrowserRouter>
+          <Routes>
+            <Route path="/" element={<SplashPage signOut={signOut} />} />
+            <Route path="/user" element={<UserPage signOut={signOut} />} />
+            <Route path="/addPost" element={<AddPostPage signOut={signOut} />} />
+          </Routes>
+        </BrowserRouter>
+      )}
     </Authenticator>
   );
 }

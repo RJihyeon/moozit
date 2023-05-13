@@ -10,7 +10,7 @@ const TitleContainer = styled.div`
 
 const TitleText = styled.h1`
   font-size : 2rem;  
-  font-weight : 600;
+  font-weight : 800;
   color : #323232;
 
 `;
