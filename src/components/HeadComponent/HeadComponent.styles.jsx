@@ -6,7 +6,8 @@ const HeadContainer = styled.div`
   height : 4rem;
   background-color : #c7b0b3;
   padding-left : 20px;
-  gap : 10rem ; 
+  padding-right : 10px;
+  justify-content : space-between;
 `;
 
 const HeadImg = styled.img`

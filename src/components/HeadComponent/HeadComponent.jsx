@@ -1,8 +1,7 @@
 import React from "react";
 import { HeadContainer, HeadImg, HeadIcon } from "./HeadComponent.styles";
 import Logo from './logo.png';
-import { SlMagnifier } from "react-icons/sl";
-import { AiOutlineMenu } from "react-icons/ai";
+import { GoPlus } from "react-icons/go";
 
 function HeadComponent() {
   return (
@@ -10,8 +9,7 @@ function HeadComponent() {
       <HeadContainer>
         <HeadImg src={Logo} />
         <HeadIcon>
-          <li><SlMagnifier size={30} /></li>
-          <li><AiOutlineMenu size={30} /></li>
+          <li><GoPlus size={30} /></li>
         </HeadIcon>
       </HeadContainer>
     </>
