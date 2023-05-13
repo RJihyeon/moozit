@@ -1,0 +1,30 @@
+{
+  "whiskey": [
+    {
+      "name": "위스키A",
+      "link": "구글 이미지 URL_A"
+    },
+    {
+      "name": "위스키B",
+      "link": "구글 이미지 URL_B"
+    },
+    {
+      "name": "위스키C",
+      "link": "구글 이미지 URL_C"
+    }
+  ],
+  "brandy": [
+    {
+      "name": "브랜디A",
+      "link": "구글 이미지 URL_A"
+    },
+    {
+      "name": "브랜디B",
+      "link": "구글 이미지 URL_B"
+    },
+    {
+      "name": "브랜디C",
+      "link": "구글 이미지 URL_C"
+    }
+  ]
+}
