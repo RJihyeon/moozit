@@ -1,13 +1,12 @@
 import React from 'react';
-
-import Title from "../components/Title/Title";
 import AddPost from "../components/AddPost/AddPost";
+import Menu from "../components/Menu/Menu";
 
 function AddPostPage() {
   return (
     <>
-      
       <AddPost />
+      <Menu page="post"/>
     </>
   )
 };
