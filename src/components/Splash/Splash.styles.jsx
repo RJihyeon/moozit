@@ -4,30 +4,38 @@ const Wrapper = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: center;
-  background-color: #fefafa;
+  background-color: #e7dddd;
 `;
 
 const WrapperImg = styled.div`
-  border : 1px solid blue;
-  margin :  100px 10px ; 
-  background-color: #fefafa;
+
+  margin :  100px 10px 10px ; 
+  background-color: ##e7dddd;
+  align-items : center ; 
+  display : flex ; 
+  justify-content : center ; 
+
 `;
 
 
 const SplashImage = styled.img`
   width: 100%;
   object-fit: cover ;
-  border : 1px solid red;
+
 `;
 
-const BrandLogo = styled.img``;
+const BrandLogo = styled.img`
+  width: 100%
+  object-fit : contain ; 
+  
+`;
 
 const StartButton = styled.button`
   border-radius: 12px;
   background-color: #591823;
   color : white;
   height : 58px;
-  margin : 0 20px ; 
+  margin : 80px 20px 0px 20px ; 
   font-weight : 800;
   font-size : 1.4rem;
 `;
