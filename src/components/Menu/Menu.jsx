@@ -13,15 +13,15 @@ const Menu = ({ page }) => {
   return (
     <MenuWrapper>
       <MenuList>
-        <li onClick={() => handleClick('/select')}>
+        <li onClick={() => handleClick('/select')} onKeyUp={() => handleClick('/select')}>
           <FaPen size={22} color={page === 'select' ? '#006FFD' : '#71727A'} />
           파티 모집
         </li>
-        <li onClick={() => handleClick('/partyList')}>
+        <li onClick={() => handleClick('/partyList')} onKeyUp={() => handleClick('/select')}>
           <FaSearch size={22} color={page === 'partyList' ? '#006FFD' : '#71727A'} />
           파티 찾기
         </li>
-        <li onClick={() => handleClick('/mypage')}>
+        <li onClick={() => handleClick('/mypage')} onKeyUp={() => handleClick('/select')}>
           <FaUserAlt size={22} color={page === 'mypage' ? '#006FFD' : '#71727A'} />
           마이 페이지
         </li>
