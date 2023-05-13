@@ -17,12 +17,13 @@ function App() {
 
   const services = {
     async handleSignUp(formData) {
-      let { username, password, attributes } = formData;
+      let { username, password, nickname, attributes } = formData;
       username = username.toLowerCase();
       attributes.email = attributes.email.toLowerCase();
       return Auth.signUp({
         username,
         password,
+        nickname,
         attributes,
         autoSignIn: {
           enabled: true,

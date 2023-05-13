@@ -5,9 +5,6 @@ function SplashPage({ signOut }) {
   return (
     <>
       <Splash />
-      <button onClick={signOut}>
-        로그아웃
-      </button>
     </>
   )
 };

@@ -6,6 +6,7 @@ import { useNavigate } from "react-router-dom";
 import { saveAccessToken } from "../../utils/token";
 
 import Margin from "../Margin/Margin";
+import Modal from "./Modal";
 
 import { Wrapper, SplashImage, StartButton, WrapperImg, BrandLogo} from "./Splash.styles";
 import companyLogo from './logo.png';
@@ -16,6 +17,8 @@ function Splash() {
   const navigate = useNavigate();
   const [accessToken, setAccessToken] = useState('');
   const [email, setEmail] = useState('');
+  const [ nickname, setNickname ] = useState('');
+  const [isOpened, setIsOpened] = useState(false);
 
   async function getAccessToken() {
     try {
@@ -38,7 +41,7 @@ function Splash() {
     try {
       const id = accessToken;
       const url = `https://ccm0e7duj5.execute-api.ap-northeast-2.amazonaws.com/dev/add-token/${id}`;
-      const data = await axios.post(url, {email});
+      const data = await axios.post(url, {email, nickname});
       console.log(data);
     } catch (e) {
       console.log(e);
@@ -46,8 +49,7 @@ function Splash() {
   };
 
   const handleClick = async () => {
-    await addToken();
-    navigate("/postlist");
+    setIsOpened(true);
   }
 
   return (
@@ -66,6 +68,14 @@ function Splash() {
         </StartButton>
         <Margin />
       </Wrapper>
+      {isOpened && <>
+        <Modal 
+          nickname={nickname }
+          addToken={addToken}
+          navigate={navigate}
+          setNickname={setNickname}
+        />
+      </>}
     </>
   )
 };
