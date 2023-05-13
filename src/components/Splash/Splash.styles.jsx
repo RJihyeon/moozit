@@ -4,6 +4,7 @@ const Wrapper = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: center;
+  height: calc(100vh - 4rem);
 `;
 
 const SplashImage = styled.img`

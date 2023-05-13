@@ -11,6 +11,7 @@ function PostList() {
   const [allPost, setAllPost] = useState([]);
 
   useEffect(() => {
+    console.log(accessToken, '왜');
     getAllPost();
   }, []);
 

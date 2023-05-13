@@ -16,7 +16,7 @@ function Splash() {
       setAccessToken(session.getAccessToken().getJwtToken());
       const user = await Auth.currentAuthenticatedUser();
       setEmail(user.attributes.email);
-      console.log(accessToken, email);
+      saveAccessToken(accessToken);
     } catch (error) {
       console.log(error.message);
     }
@@ -24,8 +24,8 @@ function Splash() {
 
   useEffect(() => {
     getAccessToken();
-    saveAccessToken(accessToken);
-  }, []);
+    console.log('왜', accessToken, email, );
+  }, [accessToken, email]);
 
   const addToken = async () => {
     try {
