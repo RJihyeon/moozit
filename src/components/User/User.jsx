@@ -1,8 +1,9 @@
 import React from 'react';
-import {Wrapper,UserInfo} from "./User.styles";
+import {Body, Wrapper,UserInfo} from "./User.styles";
 
 function User() {
   return (
+    <Body>
     <Wrapper>
       <UserInfo>
         <li>
@@ -27,6 +28,7 @@ function User() {
         </li>
       </UserInfo>
     </Wrapper>
+    </Body>
   )
 };
 

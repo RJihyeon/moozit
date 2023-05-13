@@ -1,6 +1,7 @@
 /* 전체 폰트 설정 */
 body {
   font-family: 'Nanum Gothic', sans-serif;
+
 }
 
 [data-amplify-authenticator] [data-amplify-router] {
@@ -29,7 +30,7 @@ body {
 }
 
 .amplify-tabs-item:hover {
-  color: #591823;
+  color: #818181;
   cursor: pointer;
 }
 
@@ -40,4 +41,26 @@ body {
 .amplify-tabs-item:active {
   color: #591823;
 }
+
+.amplify-tabs-item[data-spacing] {
+  color: #818181 ;
+
+}
+
+.amplify-tabs-item[data-state=active] {
+  color: #591823 ;
+  border-color: #E7DDDD var(--amplify-components-tabs-item-active-border-color);
+  background-color: #E7DDDD var(--amplify-components-tabs-item-active-background-color);
+  transition-property: none;
+}
+
+.amplify-button--link{
+  color: #818181;
+  --amplify-internalbutton-disabled-background-color : #591823;
+};
+
+.amplify-button--small{
+  font-weight : 800;
+};
+
 
