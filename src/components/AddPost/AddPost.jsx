@@ -49,7 +49,9 @@ function AddPost() {
   
   return (
     <Wrapper>
-      <PostForm>
+      <PostForm
+        onSubmit={handleSubmit}
+      >
         <Label htmlFor="title">
           제목
         </Label>
@@ -67,7 +69,7 @@ function AddPost() {
           defaultValue={formValues.content}
           onChange={handleChange}
         />
-        <SubmitButton type="submit" onClick={() => submitForm()}>
+        <SubmitButton type="submit" onClick={submitForm}>
           등록하기
         </SubmitButton>
       </PostForm>
