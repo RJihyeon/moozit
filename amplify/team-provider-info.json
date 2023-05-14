@@ -14,6 +14,9 @@
     "categories": {
       "auth": {
         "moozitb4236f32": {}
+      },
+      "hosting": {
+        "S3AndCloudFront": {}
       }
     }
   }
