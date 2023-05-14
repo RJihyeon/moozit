@@ -10,14 +10,14 @@ import {
 } from "./PostCard.styles";
 import { BsPersonCircle, BsSlack } from "react-icons/bs";
 
-function PostCard({ email, title, content, url, post }) {
+function PostCard({ nickname, title, content, url, post }) {
 
   return (
     <>
       <CardWrapper>
         <Profile>
           <li><BsPersonCircle size={30} color='#c4bbb7'/></li>
-          <li>mooziT</li>
+          <li>{nickname}</li>
         </Profile>
         <CardPictureContainer>
           <CardPic src={url} alt="사진"/>

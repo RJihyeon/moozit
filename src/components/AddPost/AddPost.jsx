@@ -29,8 +29,6 @@ function AddPost() {
     drink: '',
   };
 
-  const notify = () => toast("성공적으로 글을 등록했습니다!");
-
   const [ pictureURL, setPictureURL ] = useState("");
   const [formValues, setFormValues] = useState(initialValues);
 
